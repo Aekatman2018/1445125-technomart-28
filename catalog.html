@@ -25,7 +25,7 @@
         </section>
         <section>
           <div class="autorized">
-            <a href="#"><img scr="img/svg/icon-user.svg" width="20" height="18" alt="icon-user"></a>
+            <a href="#"><img src="img/svg/icon-user.svg" width="20" height="18" alt="icon-user"></a>
             <a href="#">Равшан Джумшутович</a>
             <a href="index.html"><img src="img/svg/icon-logout.svg" width="20" height="17" alt="exit-icon"></a>
           </div>
@@ -49,12 +49,12 @@
       <h1>Каталог товаров</h1>
       <section class="directory">
         <ul>
-          <li><a href="index.html"><img src=""></a></li>
-          <li> > </li>
+          <li><a href="index.html"><img src="img/svg/icon-home.svg"></a></li>
+          <li><img src="img/svg/icon-right-small.svg"></li>
           <li><a href="catalog.html">Каталог</a></li>
-          <li> > </li>
+          <li><img src="img/svg/icon-right-small.svg"></li>
           <li><a href="blank.html">Инструмент</a></li>
-          <li> > </li>
+          <li><img src="img/svg/icon-right-small.svg"></li>
           <li><a href="blank.html">Перфораторы</a></li>
         </ul>
       </section>
@@ -64,6 +64,16 @@
         <form class="filter-form" action="https://echo.htmlacademy.ru/">
           <fieldset class="price">
             <legend>Цена:</legend>
+              <div class="filter-line">
+                <img src="img/svg/filter-button.svg" width="20" height="22" alt="">
+                <img src="img/svg/bitmap.svg" width="152" height="2" alt="">
+                <img src="img/svg/filter-button.svg" width="20" height="22" alt="">
+              </div>
+              <div class="minmax">
+                <div class="minprice">0</div>
+                <div class="tire">-</div>
+                <div class="maxprice">30000</div>
+              </div>
           </fieldset>
           <fieldset class="makers">
             <legend>Производители:</legend>
@@ -76,11 +86,11 @@
           <fieldset class="power">
             <legend>ПИТАНИЕ:</legend>
               <label>
-                <input type="radio" name="accum" value="accum">
+                <input type="radio" name="power" value="accum">
                 АККУМУЛЯТОРНЫЕ
               </label>
               <label>
-                <input type="radio" name="electric" value="electric">
+                <input type="radio" name="power" value="electric">
                 СЕТЕВЫЕ
               </label>
           </fieldset>
@@ -98,55 +108,124 @@
         </ul>
       </section>
       <article class="good">
-        <img src="img/goods/perf2-3000.jpg" width="144" height="128" alt="BOSCH BFG 3000">
+        <div class="img-good">
+          <div class="getbuy">
+            <button class="buy"><img src="img/svg/icon-cart.svg">Купить</button>
+            <button class="favorite">В закладки</button>
+          </div>
+          <img src="img/goods/perf2-3000.jpg" width="144" height="128" alt="BOSCH BFG 3000">
+        </div>
+        <!-- css для всплывающего окна с кнопками
+          .getbuy {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}-->
         <h4 class="perf">ПЕРФОРАТОР BOSCH BFG 3000</h4>
         <div class="old-price">22500 Р.</div>
         <div class="new-price">15500 Р.</div>
       </article>
       <article class="good">
-        <img src="img/goods/perf6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
+        <div class="img-good">
+          <div class="getbuy">
+            <button class="buy"><img src="img/svg/icon-cart.svg">Купить</button>
+            <button class="favorite">В закладки</button>
+          </div>
+          <img src="img/goods/perf6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
+        </div>
         <h4 class="perf">ПЕРФОРАТОР BOSCH BFG 6000</h4>
         <div class="old-price">30500 Р.</div>
         <div class="new-price">25500 Р.</div>
       </article>
       <article class="good">
-        <img src="img/goods/perf2-3000.jpg" width="144" height="128" alt="BOSCH BFG 2000">
+        <div class="img-good">
+          <div class="getbuy">
+            <button class="buy"><img src="img/svg/icon-cart.svg">Купить</button>
+            <button class="favorite">В закладки</button>
+          </div>
+          <img src="img/goods/perf2-3000.jpg" width="144" height="128" alt="BOSCH BFG 2000">
+        </div>
         <h4 class="perf">ПЕРФОРАТОР BOSCH BFG 2000</h4>
+        <div class="new">New</div>
         <div class="old-price"></div>
         <div class="new-price">12500 Р.</div>
       </article>
       <article class="good">
-        <img src="img/goods/perf2-3000.jpg" width="144" height="128" alt="BOSCH BFG 3000">
+        <div class="img-good">
+          <div class="getbuy">
+            <button class="buy"><img src="img/svg/icon-cart.svg">Купить</button>
+            <button class="favorite">В закладки</button>
+          </div>
+          <img src="img/goods/perf2-3000.jpg" width="144" height="128" alt="BOSCH BFG 3000">
+        </div>
         <h4 class="perf">ПЕРФОРАТОР BOSCH BFG 3000</h4>
+        <div class="new">New</div>
         <div class="old-price">22500 Р.</div>
         <div class="new-price">15500 Р.</div>
       </article>
       <article class="good">
-        <img src="img/goods/perf6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
+        <div class="img-good">
+          <div class="getbuy">
+            <button class="buy"><img src="img/svg/icon-cart.svg">Купить</button>
+            <button class="favorite">В закладки</button>
+          </div>
+          <img src="img/goods/perf6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
+        </div>
         <h4 class="perf">ПЕРФОРАТОР BOSCH BFG 6000</h4>
         <div class="old-price">30500 Р.</div>
         <div class="new-price">25500 Р.</div>
       </article>
       <article class="good">
-        <img src="img/goods/perf2-3000.jpg" width="144" height="128" alt="BOSCH BFG 2000">
+        <div class="img-good">
+          <div class="getbuy">
+            <button class="buy"><img src="img/svg/icon-cart.svg">Купить</button>
+            <button class="favorite">В закладки</button>
+          </div>
+          <img src="img/goods/perf2-3000.jpg" width="144" height="128" alt="BOSCH BFG 2000">
+        </div>
         <h4 class="perf">ПЕРФОРАТОР BOSCH BFG 2000</h4>
+        <div class="new">New</div>
         <div class="old-price"></div>
         <div class="new-price">12500 Р.</div>
       </article><article class="good">
-        <img src="img/goods/perf2-3000.jpg" width="144" height="128" alt="BOSCH BFG 3000">
+        <div class="img-good">
+          <div class="getbuy">
+            <button class="buy"><img src="img/svg/icon-cart.svg">Купить</button>
+            <button class="favorite">В закладки</button>
+          </div>
+          <img src="img/goods/perf2-3000.jpg" width="144" height="128" alt="BOSCH BFG 3000">
+        </div>
         <h4 class="perf">ПЕРФОРАТОР BOSCH BFG 3000</h4>
+        <div class="new">New</div>
         <div class="old-price">22500 Р.</div>
         <div class="new-price">15500 Р.</div>
       </article>
       <article class="good">
-        <img src="img/goods/perf6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
+        <div class="img-good">
+          <div class="getbuy">
+            <button class="buy"><img src="img/svg/icon-cart.svg">Купить</button>
+            <button class="favorite">В закладки</button>
+          </div>
+          <img src="img/goods/perf6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
+        </div>
         <h4 class="perf">ПЕРФОРАТОР BOSCH BFG 6000</h4>
         <div class="old-price">30500 Р.</div>
         <div class="new-price">25500 Р.</div>
       </article>
       <article class="good">
-        <img src="img/goods/perf2-3000.jpg" width="144" height="128" alt="BOSCH BFG 2000">
+        <div class="img-good">
+          <div class="getbuy">
+            <button class="buy"><img src="img/svg/icon-cart.svg">Купить</button>
+            <button class="favorite">В закладки</button>
+          </div>
+          <img src="img/goods/perf2-3000.jpg" width="144" height="128" alt="BOSCH BFG 2000">
+        </div>
         <h4 class="perf">ПЕРФОРАТОР BOSCH BFG 2000</h4>
+        <div class="new">New</div>
         <div class="old-price"></div>
         <div class="new-price">12500 Р.</div>
       </article>
