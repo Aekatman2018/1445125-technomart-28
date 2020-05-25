@@ -40,9 +40,9 @@
       </nav>
     </header>
     <main>
-      <h1>Магазин Техномарт</h1>
+      <h1 class="visually-hidden">Магазин Техномарт</h1>
       <section class="categories">
-        <h2>Категории товаров</h2>
+        <h2 class="visually-hidden">Категории товаров</h2>
         <ul>
           <li>
             <h3>Материалы</h3>
@@ -77,8 +77,8 @@
 
                   <!-- сделать фоном для .slider <img src="img/goods/slider-drill.jpg" width="620" height="266" alt="мужчина с перфоратором"> -->
 
-                <button type="button" disabled><img src="img/svg/icon-left.svg" width="22" height="40" alt="листать влево"></button>
-                <button type="button"><img src="img/svg/icon-right.svg" width="22" height="40" alt="листать вправо"></button>
+                <button type="button" ><img src="img/svg/icon-left.svg" width="22" height="40" alt="листать влево"></button>
+                <button type="button" disabled><img src="img/svg/icon-right.svg" width="22" height="40" alt="листать вправо"></button>
                 <button> <a href="catalog.html">открыть каталог</a></button>
               </div>
             </article>
@@ -105,14 +105,14 @@
           <img src="img/goods/perf3-9000.jpg" width="184" height="164" alt="BOSCH BFG 9000">
           <h4 class="perf">ПЕРФОРАТОР BOSCH BFG 9000</h4>
           <div class="old-price">32500 Р.</div>
-          <button class="new-price">25500 Р.</div>
+          <button class="new-price">25500 Р.</button>
         </article>
         <article class="good">
           <img src="img/goods/perf2-3000.jpg" width="184" height="164" alt="BOSCH BFG 3000">
           <h4 class="perf">ПЕРФОРАТОР BOSCH BFG 3000</h4>
           <div class="new">New</div>
           <div class="old-price">22500 Р.</div>
-          <button class="new-price">15500 Р.</div>
+          <button class="new-price">15500 Р.</button>
         </article>
         <article class="good">
           <img src="img/goods/perf6000.jpg" width="184" height="164" alt="BOSCH BFG 6000">
@@ -125,7 +125,7 @@
           <h4 class="perf">ПЕРФОРАТОР BOSCH BFG 2000</h4>
           <div class="new">New</div>
           <div class="old-price"></div>
-          <button class="new-price">12500 Р.</div>
+          <button class="new-price">12500 Р.</button>
         </article>
       </section>
       <section class="popmakers">
@@ -221,8 +221,12 @@
       <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав к нам в офис:</p>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6cbd792ea323d563b05316d95f2014a08521021fccd97c6698da49613dcb9348&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
-        <button><a href="blank.html">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a></button>
+        <img src="img/map.png" width="300" height="158" alt="map">
+        <button><a></a>ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a></button>
+      </section>
+      <section class="map">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6cbd792ea323d563b05316d95f2014a08521021fccd97c6698da49613dcb9348&amp;source=constructor" width="943" height="449" frameborder="0">
+        </iframe>
       </section>
     </main>
     <footer>
@@ -272,5 +276,21 @@
       </div>
     </section>
     </footer>
+    <section class="write-us">
+      <form action="https://echo.htmlacademy.ru/" method="post">
+        <button class="close"><img src="img/svg/icon-close.svg" width="21" height="21" alt="close"></button>
+        <label for="name">Ваше имя:</label>
+        <input type="text" name="name" id="name" value="Имя Фамилия">
+        <label for="e-mail">Ваш e-mail:</label>
+        <input type="email" name="mail" id="e-mail" value="email@expample.com">
+        <label for="letter">Текст письма:</label>
+        <textarea id="letter" name="text-letter" row="5">
+          В свободной форме
+        </textarea>
+        <input type="submit" value="оформить заказ">
+      </form>
+
+
+    </section>
   </body>
 </html>
