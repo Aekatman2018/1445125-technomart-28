@@ -3,49 +3,56 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Каталог - Техномарт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
-      <nav>
-        <section class="top-nav">
-          <a href="index.html"><img src="img/svg/logo-technomart.svg" width="220" height="47" alt="Логотип магазина Техномарт"></a>
-          <img src="img/svg/icon-search.svg" width="17" height="17" alt="значок поиска">
-          <input type="search" name="search" value="Поиск">
-          <ul>
-            <li><a href="favor.html"><img src="img/svg/icon-bookmark.svg" width="14" height="16" alt="значок закладки">Закладки</a></li>
-            <li><a href="basket.html"><img src="img/svg/icon-cart.svg" width="15" height="15" alt="значок корзины">Корзина</a></li>
-          </ul>
+      <nav class="navigation">
+        <div class="top-nav">
+          <a class="header-logo">
+            <img src="img/svg/logo-technomart.svg" width="220" height="47" alt="Логотип магазина Техномарт">
+          </a>
+          <ul class="top-nav-buttons">
+            <li><img src="img/svg/icon-search.svg" width="17" height="17" alt="значок поиска">Поиск
+              <input type="search" name="search"></li>
+              <li><a href="blank.html"><img src="img/svg/icon-bookmark.svg" width="14" height="16" alt="значок закладки">Закладки: 0</a></li>
+              <li class="basket"><a href="blank.html"><img src="img/svg/icon-cart.svg" width="15" height="15" alt="значок корзины">Корзина: 10</a></li>
+            </ul>
           <input type="submit" value="Оформить заказ">
-        </section>
-        <section class="address">
-          <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
-          <img src="img/svg/icon-phone.svg" width="19" height="19" alt="значок телефона">
-          <tel>+7 (812) 555-05-55</tel>
-          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
-        </section>
-        <section>
-          <div class="autorized">
+        </div>
+        <div class="header-info">
+          <div class="descript">
+            <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
+          </div>
+          <div class="contacts">
+            <img src="img/svg/icon-phone.svg" width="19" height="19" alt="значок телефона">
+            <tel>+7 (812) 555-05-55</tel>
+            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
+          </div>
+          <div class="user-nav-sign-in">
             <a href="#"><img src="img/svg/icon-user.svg" width="20" height="18" alt="icon-user"></a>
             <a href="#">Равшан Джумшутович</a>
             <a href="index.html"><img src="img/svg/icon-logout.svg" width="20" height="17" alt="exit-icon"></a>
           </div>
-          <ul>
-            <li><a href="blank.html">Мои заказы</a></li>
-            <li><a href="blank.html">Личный кабинет</a></li>
-          </ul>
-        </section>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="blank.html">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="blank.html">Новости</a></li>
-          <li><a href="blank.html">Спецпредложения</a></li>
-          <li><a href="blank.html">Контакты</a></li>
-          <li><a href="blank.html">Доставка</a></li>
-        </ul>
+        </div>
+        <div class="main-nav-wrapper">
+          <div class="conteiner">
+            <ul class="site-nav">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="blank.html">Компания</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="blank.html">Новости</a></li>
+              <li><a href="blank.html">Спецпредложения</a></li>
+              <li><a href="blank.html">Контакты</a></li>
+              <li><a href="blank.html">Доставка</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
-    <main>
+    <main class="conteiner">
       <h1 class="visually-hidden">Каталог товаров</h1>
       <section class="directory">
         <ul>
