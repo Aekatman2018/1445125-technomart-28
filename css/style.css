@@ -77,19 +77,37 @@ img {
 }
 .top-nav-buttons ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+
 }
 .top-nav-buttons li {
   display: inline-block;
-
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  }
+.search-field {
+  margin-right: 10px;
 }
 .get-order {
   display: flex;
   height: 42px;
   width: 150px;
 }
+.get-order input {
+  background-color: var(--basic-green);
+  color: var(--basic-white);
+  font-size: 18px;
+  line-height: 24px;
+  border: none;
+  width: 150px;
+  height: 42px;
+}
 .bottom-nav {
   background-color: #F3F7F9;
+  padding-bottom: 60px;
 }
 .header-info {
   width: 940px;
@@ -100,15 +118,16 @@ img {
   font-size: 16px;
   line-height: 23px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .descript p{
   margin-top: 41px;
+  margin-left: 25px;
 }
 .phone {
   border: 5px solid #ffffff;
   width: 270px;
-  height: 45px;
+  height: 35px;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
@@ -132,6 +151,7 @@ img {
   height: 24px;
   padding-left: 20px;
   margin-top: 3px;
+  margin-bottom: 40px;
   }
 .user-nav {
   display: flex;
@@ -164,6 +184,7 @@ img {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin-top: 20px;
   padding: 0;
   min-width: 940px;
   height: 60px;
