@@ -8,37 +8,57 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <nav class="navigation">
         <div class="top-nav">
-          <a class="header-logo">
-            <img src="img/svg/logo-technomart.svg" width="220" height="47" alt="Логотип магазина Техномарт">
-          </a>
-          <ul class="top-nav-buttons">
-            <li><img src="img/svg/icon-search.svg" width="17" height="17" alt="значок поиска">Поиск
-              <input type="search" name="search"></li>
-              <li><a href="blank.html"><img src="img/svg/icon-bookmark.svg" width="14" height="16" alt="значок закладки">Закладки: 0</a></li>
-              <li class="basket"><a href="blank.html"><img src="img/svg/icon-cart.svg" width="15" height="15" alt="значок корзины">Корзина: 10</a></li>
-            </ul>
-          <input type="submit" value="Оформить заказ">
-        </div>
-        <div class="header-info">
-          <div class="descript">
-            <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
-          </div>
-          <div class="contacts">
-            <img src="img/svg/icon-phone.svg" width="19" height="19" alt="значок телефона">
-            <tel>+7 (812) 555-05-55</tel>
-            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
-          </div>
-          <div class="user-nav-sign-in">
-            <a href="#"><img src="img/svg/icon-user.svg" width="20" height="18" alt="icon-user"></a>
-            <a href="#">Равшан Джумшутович</a>
-            <a href="index.html"><img src="img/svg/icon-logout.svg" width="20" height="17" alt="exit-icon"></a>
+          <div class="top-navi conteiner">
+            <a class="header-logo" href="index.html">
+              <img src="img/svg/logo-technomart.svg" width="220" height="47" alt="Логотип магазина Техномарт">
+            </a>
+            <form class="search-field" action="http://htmlacademy.ru">
+              <img src="img/svg/icon-search.svg" width="17" height="17" alt="значок поиска">
+              <input type="text" name="search" placeholder="Поиск:" width="271" height="42">
+            </form>
+            <a class="bookmark" href="blank.html">
+              <!--::before img-->
+              Закладки: 0</a>
+            <a class="cart" href="blank.html">
+              <!--::before img-->
+              Корзина: 0</a>
+            <a class="make-order" href="blank.html">Оформить заказ</a>
           </div>
         </div>
-        <div class="main-nav-wrapper">
-          <div class="conteiner">
+        <div class="bottom-nav">
+          <div class="header-info">
+            <div class="descript">
+              <p>Интернет-магазин<br>
+                строительных материалов<br>
+                и инструментов для ремонта</p>
+            </div>
+            <div class="contacts">
+              <div class="phone">
+                <img src="img/svg/icon-phone.svg" width="19" height="19" alt="значок телефона">
+                <tel>+7 (812) 555-05-55</tel>
+              </div>
+              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
+            </div>
+            <div class="user-nav">
+              <ul class="button-user-nav">
+                <li class="signed-in">
+                  <a href="blank.html">
+                    <!--::before img-->
+                    Равшан Джумшутович
+                    <!--::after img-->
+                  </a>
+                </li>
+              </ul>
+              <ul class="signed-in-links">
+                <li><a href="#">Мои заказы</a></li>
+                <li><a href="#"><!--::before-->Личный кабинет</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-nav-wrapper">
             <ul class="site-nav">
               <li><a href="index.html">Главная</a></li>
               <li><a href="blank.html">Компания</a></li>
