@@ -45,7 +45,7 @@ img {
 }
 
 
-/* navigation */
+/* header */
 
 .navigation {
   font-size: 18px;
@@ -65,8 +65,8 @@ img {
 }
 .top-nav a:hover,
 .top-nav a:focus {
-  color: var(--basic-white);
-}
+  opacity: 1;
+  }
 .top-nav a.make-order:hover {
   background-color: var(--special-success);
 }
@@ -78,7 +78,24 @@ img {
 .top-nav a.make-order:active {
   opacity: 0.5;
 }
-
+a.bookmark::before {
+  content: url(../img/svg/icon-bookmark.svg);
+  display: inline-block;
+  width: 14px;
+  height: 16px;
+  opacity: 0.3;
+}
+a.cart::before {
+  content: url(../img/svg/icon-cart.svg);
+  display: inline-block;
+  width: 14px;
+  height: 16px;
+  opacity: 0.3;
+}
+a.bookmark:hover::before,
+a.cart:hover::before {
+  opacity:1;
+}
 
 /* header info - middle part of header*/
 
@@ -192,7 +209,7 @@ a.category-button {
   background-color: var(--special-yellow);
 }
 .materials::before {
-  content: url(img/svg/icon-1.svg);
+  content: url(../img/svg/icon-1.svg);
   position: absolute;
   width: 44px;
   height: 65px;
@@ -201,47 +218,72 @@ a.category-button {
   background-color: var(--special-blue);
 }
 .tools::before {
-  content:"";
+  content: url(../img/svg/icon-2.svg);
   position: absolute;
   width: 75px;
   height: 61px;
-  background-image: url(..img/svg/icon-2.svg);
-}
+  }
 .technic {
   background-color: var(--special-lilac);
 }
 .technic::before {
-  content:"";
+  content: url(../img/svg/icon-3.svg);
   position: absolute;
   width: 78px;
   height: 62px;
-  background-image: url(..img/svg/icon-3.svg);
 }
 .sale {
   background-color: var(--special-greenlight);
 }
 .sale::before {
-  content:"";
+  content: url(../img/svg/icon-4.svg);
   position: absolute;
   width: 59px;
   height: 72px;
-  background-image: url(..img/svg/icon-4.svg);
 }
 .delivery-card {
   background-color: #FFC047;
 }
 .delivery-card::before {
-  content:"";
+  content:url(../img/svg/icon-5.svg);
   position: absolute;
   width: 59px;
   height: 72px;
-  background-image: url(..img/svg/icon-5.svg);
 }
-
+.perforators {
+  width: 620px;
+  height: 226px;
+  background-color: var(--basic-black);
+  background-image: url(../img/goods/slider-perf.jpg);
+}
+.perforators span,
+.drills span {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.perforators p,
+.drills p {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+.next-slide {
+  background: transparent;
+  border: none;
+}
+.drills {
+  width: 620px;
+  height: 226px;
+  background-color: var(--basic-black);
+  background-image: url(../img/goods/slider-drill.jpg);
+}
 
 /* popular products */
 
-.pop-goods-title {
+.pop-title {
   background-color: #F9F5F0;
   width: 940px;
   height: 89px;
@@ -252,7 +294,11 @@ h2 {
   text-transform: uppercase;
   color: var(--basic-site-nav);
 }
-.pop-goods-title a {
+.pop-title a,
+.descr-credit a {
+  display: block;
+  width: 192px;
+  height: 38px;
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
@@ -342,4 +388,166 @@ a.buy {
   }
 .hidden-buttons .to-bookmarks a:active {
   opacity: 0.5;
+}
+
+
+/*pop makers*/
+
+
+.makers {
+  list-style: none;
+}
+.makers li:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+.makers li:active {
+  opacity: 0.5;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* services */
+
+.services {
+  background-color: var(--basic-background);
+}
+.services p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.service-list-choice {
+  list-style: none;
+  color: var(--basic-white);
+  background-color: var(--basic-site-nav);
+  font-size: 21px;
+  line-height: 30px;
+}
+.select-block input[type="radio"]:checked + label {
+  background: var(--basic-white);
+  box-shadow: 0px 1px 0px var(--basic-white);
+  color: var(--basic-site-nav);
+} /* where is the error */
+
+
+/* about company */
+
+.company p {
+font-family: 'PT Sans', sans-serif;
+font-size: 13px;
+line-height: 24px;
+}
+.delivery-companies {
+  list-style: none;
+}
+.delivery-companies li{
+  font-size: 18px;
+  line-height: 24px;
+}
+.delivery-companies li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background-color: var(--basic-red);
+}
+  a.about-us-button,
+  a.write-us-button,
+  a.open-catalog {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 18px;
+    padding: 11px 40px 11px 40px;
+    background-color: var(--basic-red);
+    text-transform: uppercase;
+}
+a.open-catalog:active {
+  background-color: var(--special-error);
+
+/* footer*/
+.footer-navigation-list {
+  list-style: none;
+}
+.top-footer {
+  background-color: var(--basic-site-nav);
+  font-size: 18px;
+  line-height: 24px;
+
+}
+.footer-navigation-list a {
+  color: var(--basic-background);
+  font-family: inherit;
+}
+.top-footer a:hover {
+  text-decoration: underline;
+}
+.top-footer a:active {
+  opacity: 0.5;
+}
+.footer-navigation-list li:nth-of-type(-4n) a {
+  color: var(--special-yellowlight);
+} /*where is the error???*/
+
+.left-side p {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-bg-bottom-nav);
+}
+
+.bottom-footer-nav {
+  background-color: var(--basic-top-nav);
+
+}
+.sw-list {
+  list-style: none;
+}
+.bottom-footer-nav a,
+.bottom-footer-nav p {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+  a.sw-button {
+    background-color: #212A3A;
+    width: 44px;
+    height: 44px;
+}
+.email a,
+.produced a {
+  color: var(--special-yellowlight);
+}
+.email a:hover,
+.produced a:hover {
+  text-decoration: underline;
+}
+.email a:active,
+.produced a:active {
+  color: var(--basic-red);
+}
+
+
+/* WRITE US! modal window*/
+.write-us-form {
+  display: flex;
+  padding: 55px 80px 0 80px;
+}
+.form-conteiner {
+  width:620px;
+  height: 430px;
+}
+.order-button {
+  display: inline-block;
+  padding: 11px 50px;
+  font-size: 14px;
+  line-height: 18px;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: #ff5357;
+  border: none;
+  border-radius: 2px;
 }
