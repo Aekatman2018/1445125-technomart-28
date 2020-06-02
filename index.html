@@ -16,8 +16,7 @@
                 <img src="img/svg/logo-technomart.svg" width="220" height="47" alt="Логотип магазина Техномарт">
               </a>
               <form class="search-field" action="http://htmlacademy.ru">
-                <img src="img/svg/icon-search.svg" width="17" height="17" alt="значок поиска">
-                <input type="text" name="search" placeholder="Поиск:" width="271" height="42">
+                <input id="search" type="text" name="search" placeholder="Поиск:" width="271" height="42">
               </form>
               <a class="bookmark" href="blank.html">
                 <!--::before img-->
@@ -41,16 +40,16 @@
                   <img src="img/svg/icon-phone.svg" width="19" height="19" alt="значок телефона">
                   <tel>+7 (812) 555-05-55</tel>
                 </div>
-                <p>г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
+                <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
               </div>
               <div class="user-nav">
                 <ul class="button-user-nav">
                   <li class="sign-in">
                     <a href="blank.html">
-                      <!--::before img-->
+                      <!--<svg img>-->
                       Войти
                     </a></li>
-                  <li><a href="blank.html">Регистрация</a></li>
+                  <li class="registr"><a href="blank.html">Регистрация</a></li>
                 </ul>
               </div>
             </div>
@@ -61,8 +60,8 @@
                 <li><a href="catalog.html">Каталог</a></li>
                 <li><a href="blank.html">Новости</a></li>
                 <li><a href="blank.html">Спецпредложения</a></li>
-                <li><a href="blank.html">Контакты</a></li>
                 <li><a href="blank.html">Доставка</a></li>
+                <li><a href="blank.html">Контакты</a></li>
               </ul>
             </div>
           </div>
@@ -376,20 +375,23 @@
     <div class="write-us">
       <h2 class="visually-hidden">Напишите нам!</h2>
       <form class="write-us-form" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="form-conteiner">
           <button class="close"><img src="img/svg/icon-close.svg" width="21" height="21" alt="close"></button>
+          <p>
             <label for="name">Ваше имя:</label>
-          <input type="text" name="name" id="name" value="Имя Фамилия">
+            <input type="text" name="name" id="name" value="Имя Фамилия">
+          </p>
+          <p>
             <label for="e-mail">Ваш e-mail:</label>
           <input type="email" name="mail" id="e-mail" value="email@expample.com">
-            <label for="letter">Текст письма:</label>
-          <textarea id="letter" name="text-letter" row="5">
+          </p>
+          <p>
+            <label for="letter">Текст письма:</label><br>
+            <textarea id="letter" name="text-letter">
             В свободной форме
-          </textarea>
+            </textarea>
           <div class="order-button-field">
-            <input class="order-button" type="submit" value="оформить заказ">
+            <button class="order-button" type="submit" value="оформить заказ">Отправить</button>
           </div>
-        </div>
       </form>
     </div>
     <div class="map-window">
