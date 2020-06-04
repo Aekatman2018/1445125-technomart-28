@@ -87,7 +87,7 @@
       <h2>ПЕРФОРАТОРЫ</h2>
       <section class="filter">
         <h3>Фильтр</h3>
-        <form class="filter-form" action="https://echo.htmlacademy.ru/">
+        <form class="filter-form" action="https://echo.htmlacademy.ru/" method="GET">
           <fieldset class="price">
             <legend>Цена:</legend>
               <div class="filter-line">
@@ -103,22 +103,30 @@
           </fieldset>
           <fieldset class="makers">
             <legend>Производители:</legend>
-              <label><input type="checkbox" id="bosch">BOSCH</label>
-              <label><input type="checkbox" id="interskol">ИНТЕРСКОЛ</label>
-              <label><input type="checkbox" id="makita">MAKITA</label>
-              <label><input type="checkbox" id="dewalt">DeWalt</label>
-              <label><input type="checkbox" id="hitachi">HITACHI</label>
+              <ul class="filter-makers">
+                <li><label><input type="checkbox" id="bosch" name="BOSCH" checked>BOSCH</label></li>
+                <li><label><input type="checkbox" id="interskol" name="interskol">ИНТЕРСКОЛ</label></li>
+                <li><label><input type="checkbox" id="makita" name="Makita"checkbox>MAKITA</label></li>
+                <li><label><input type="checkbox" id="dewalt" name="dewalt">DeWalt</label></li>
+                <li><label><input type="checkbox" id="hitachi" name="hitachi">HITACHI</label></li>
+              </ul>
           </fieldset>
           <fieldset class="power">
             <legend>ПИТАНИЕ:</legend>
-              <label>
-                <input type="radio" name="power" value="accum">
-                АККУМУЛЯТОРНЫЕ
-              </label>
-              <label>
-                <input type="radio" name="power" value="electric">
-                СЕТЕВЫЕ
-              </label>
+              <ul class="filter-power">
+                <li>
+                  <label>
+                    <input id="accum" type="radio" name="power" value="accum" checked>
+                    АККУМУЛЯТОРНЫЕ
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input id="accum" type="radio" name="power" value="electric">
+                    СЕТЕВЫЕ
+                  </label>
+                </li>
+              </ul>
           </fieldset>
           <button type="submit">ПОКАЗАТЬ</button>
         </form>
