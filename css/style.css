@@ -524,6 +524,8 @@ margin-left: 30px;
 
 h2 {
 font-family: 'Cuprum' sans-serif;
+font-style: normal;
+font-weight: normal;
 font-size: 30px;
 line-height: 30px;
 text-transform: uppercase;
@@ -721,6 +723,9 @@ padding-left: 28px;
 .to-bookmarks:hover {
   border-color: var(--basic-site-nav);
   }
+.to-bookmarks:active {
+  opacity: 0.5;
+  }
 .hidden-buttons .to-bookmarks a:active {
   opacity: 0.5;
 }
@@ -762,9 +767,10 @@ padding-left: 28px;
 
 .services {
   background-color: var(--basic-background);
-  border: 1px solid black;
   margin: 0px;
   padding: 0px;
+  overflow: hidden;
+  padding-bottom: 99px;
 }
 .service-title h2 {
   color: var(--basic-black);
@@ -786,30 +792,42 @@ padding-left: 28px;
   display: none;
 }
 .service-field {
-  border: 2px solid green;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 .service-list {
-  border: 1px solid black;
   width: 240px;
+  position: relative;
+}
+.service-list::before {
+  content: url(../img/svg/service-rightline.svg);
+  position: absolute;
+  width: 10px;
+  height: 279px;
+  right: 0px;
+  bottom: -45px;
 }
 .service-list-choice {
   list-style: none;
+  margin:0px;
+  padding:0px;
 }
 .service-list li {
-  display: block;
-  width: 240px;
+  display: flex;
+  align-items: center;
+  width: auto;
   height: 61px;
   font-family: 'Cuprum', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
-}
-.descr-delivery {
-  border: 1px solid black;
-  width: 619px;
+  padding: 0px;
+  padding-left: 22px;
+  margin: 0px;
+  background-color: var(--basic-top-nav);
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
 }
 .service-list-choice {
   list-style: none;
@@ -825,19 +843,139 @@ padding-left: 28px;
 } /* where is the error */
 
 
+.select-block input#delivery-row:checked .service-list li {
+  background-color: var(--basic-white);
+  color: var(--basic-top-nav);
+  box-shadow: none;
+}
+.descr-delivery,
+.descr-guarantee,
+.descr-credit {
+  width: 619px;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+.descr-delivery h2,
+.descr-guarantee h2,
+.descr-credit h2 {
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 30px;
+}
+.descr-delivery p,
+.descr-guarantee p,
+.descr-credit p {
+  margin: 0px;
+  padding: 0px;
+}
+.descr-delivery::before {
+  content: url(../img/svg/service-delivery-car.svg);
+  position: absolute;
+  width:468px;
+  height: 261px;
+  right:0px;
+  top: 22px;
+}
+.descr-guarantee::before {
+  content: url(../img/svg/service-garanty.svg);
+  position: absolute;
+  width:389px;
+  height: 283px;
+  right:0px;
+  top: 0px;
+}
+.descr-credit::before {
+  content: url(../img/svg/service-credit.svg);
+  position: absolute;
+  width:465px;
+  height: 285px;
+  right:0px;
+  top: 0px;
+}
+.descr-credit a {
+  display: block;
+  width: 195px;
+  height: 38px;
+  margin-right: auto;
+  padding: 0px;
+  padding-top: 12px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.descr-credit p {
+  padding-bottom: 27px;
+}
+
+
+
 /* about company */
 
-.company p {
-font-family: 'PT Sans', sans-serif;
-font-size: 13px;
-line-height: 24px;
+
+.about-company {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.about-company-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+.about-company h2,
+.contacts h2 {
+  color: var(--basic-black);
+  margin: 0px;
+  padding: 0px;
+  }
+.company {
+  width: 456px;
+  height: 357px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.company-on-map {
+  width: 300px;
+  height: 357px;
+  box-sizing: border-box;
+}
+.advantages {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 478px;
+  min-height: 147px;
+  box-sizing: border-box;
+}
+.company p,
+.company-on-map p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  margin: 0px;
+}
+.company-on-map {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.company-on-map p {
+  justify-self: start;
 }
 .delivery-companies {
   list-style: none;
-}
+  margin: 0px;
+  padding: 0px;
+  }
 .delivery-companies li{
   font-size: 18px;
   line-height: 24px;
+  padding-left: 37px;
+  position: relative;
 }
 .delivery-companies li::before {
   content: "";
@@ -848,67 +986,188 @@ line-height: 24px;
   height: 2px;
   background-color: var(--basic-red);
 }
-  a.about-us-button,
-  a.write-us-button,
-  a.open-catalog {
-    color: var(--basic-white);
-    font-size: 14px;
-    line-height: 18px;
-    padding: 11px 40px 11px 40px;
-    background-color: var(--basic-red);
-    text-transform: uppercase;
+a.about-us-button,
+a.write-us-button,
+a.open-catalog {
+  box-sizing: border-box;
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px 40px 10px 40px;
+  background-color: var(--basic-red);
+  text-transform: uppercase;
 }
-  a.open-catalog:active {
+a.write-us-button {
+  padding:0px;
+  padding-top: 10px;
+  display: inline-block;
+  width: 300px;
+  height: 38px;
+  text-align: center;
+  vertical-align: middle;
+}
+a.open-catalog:active {
   background-color: var(--special-error);
   }
+.about-us-button {
+  margin: 0px;
+  align-self: flex-start;
+  }
+
+
 /* footer*/
-.footer-navigation-list {
-  list-style: none;
-}
+
+/*top-footer*/
+
+
 .top-footer {
   background-color: var(--basic-site-nav);
   font-size: 18px;
   line-height: 24px;
-
+}
+.top-footer-block {
+  box-sizing: border-box;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.left-side {
+  min-width: 321px;
+  box-sizing: border-box;
+}
+.left-side p {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0px;
+  padding-top: 27px;
+  padding-bottom: 60px;
+  color: var(--basic-bg-bottom-nav);
+}
+.footer-navigation {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  }
+.footer-navigation-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.footer-category-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 .footer-navigation-list a {
   color: var(--basic-background);
   font-family: inherit;
-}
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  padding-top: 42px;
+  padding-left: 60px;
+  }
+.footer-category-list a {
+  color: var(--special-yellowlight);
+  font-family: inherit;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  padding-top: 42px;
+  padding-left: 60px;
+  }
 .top-footer a:hover {
   text-decoration: underline;
 }
 .top-footer a:active {
+  text-decoration: none;
   opacity: 0.5;
 }
-.footer-navigation-list li:nth-of-type(-4n) a {
-  color: var(--special-yellowlight);
-} /*where is the error???*/
 
-.left-side p {
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--basic-bg-bottom-nav);
-}
+
+
+/*bottom-footer*/
+
 
 .bottom-footer-nav {
   background-color: var(--basic-top-nav);
-
+  margin-bottom: 70px;
+  }
+.bottom-footer-block {
+  border: 1px solid green;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.copyright {
+  border: 1px solid yellow;
+  width: 227px;
+  margin: 0px;
+}
+.bottom-footer-pw,
+.copyright p {
+  margin: 0px;
+  padding: 0px;
 }
 .sw-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 143px;
+  margin: 0 auto;
+  padding: 0;
   list-style: none;
+  border: 1px solid yellow;
 }
+a.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #212A3A;
+  color: black;
+  border-radius: 50%;
+  }
+.email-produced {
+  border: 1px solid yellow;
+  min-width: 300px;
+  padding-right: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.email {
+  border: 1px solid yellow;
+  display: inline-block;
+  vertical-align: middle;
+  height: auto;
+  }
+.produced {
+  border: 1px solid yellow;
+  display: inline-block;
+  vertical-align: middle;
+  height: auto;
+}
+
 .bottom-footer-nav a,
 .bottom-footer-nav p {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
 }
-  a.sw-button {
-    background-color: #212A3A;
-    width: 44px;
-    height: 44px;
-}
+
 .email a,
 .produced a {
   color: var(--special-yellowlight);
