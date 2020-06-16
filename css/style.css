@@ -1478,7 +1478,10 @@ p.block-title {
   align-self: center;
 }
 /*filter-checkbox radio */
-
+.filter-option label:focus {
+  outline: 1px solid black;
+  z-index: 5;
+}
 .makers-filter,
 .power {
   margin: 0;
@@ -1525,7 +1528,6 @@ p.block-title {
   position: relative;
   display: block;
   cursor: pointer;
-  user-select: none;
 }
 .filter-input-checkbox + label::before {
   content: '';
@@ -1632,9 +1634,6 @@ p.block-title {
   justify-content: start;
 }
 .page-buttons li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 38px;
   height: 38px;
   background-color: #FFFFFF;
@@ -1642,11 +1641,15 @@ p.block-title {
   border-radius: 2px;
   margin-right: 10px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .page-buttons .next-page {
   width: 140px;
 }
 .page-buttons a {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
   font-family: 'PT Sans','Arial', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1910,6 +1913,73 @@ a.sw-button:hover {
 .close::after {
   transform: rotate(-45deg);
 }
+
+
+/*modal good-to-cart*/
+
+
+.good-to-cart {
+  display: none;
+  width: 620px;
+  top: 25%;
+  bottom: auto;
+}
+.top-side {
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding: 67px 99px;
+  position: relative;
+}
+.top-side span {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+.top-side::before {
+  content: url(../img/svg/icon-mark.svg);
+  left: 81px;
+  top: 48px;
+  width: 66px;
+  height: 66px;
+  position: absolute;
+}
+.bottom-side {
+  background-color: #f1f1f1;
+  padding: 36px 112px 36px 114px;
+  display: table;
+  width: 100%;
+}
+.bottom-side a {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  width: 192px;
+  height: 38px;
+  border: none;
+
+}
+.to-order {
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  padding: 11px 46px 9px 47px;
+  margin-right: 10px;
+}
+.keep-buy {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  padding: 11px 31px 9px 32px;
+}
 /*modal write us!*/
 
 .write-us {
@@ -2021,3 +2091,5 @@ a.sw-button:hover {
 .map-window iframe {
   border: none;
 }
+
+

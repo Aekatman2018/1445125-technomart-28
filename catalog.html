@@ -143,8 +143,7 @@
                   <ul class="filter-makers">
                     <li class="filter-option filter-checkbox">
                       <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="bosch" name="BOSCH" checked>
-
-                      <label class="maker" for="bosch">BOSCH</label>
+                      <label class="maker" for="bosch" tabindex="0">BOSCH</label>
                     </li>
                     <li class="filter-option filter-checkbox">
                       <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="interskol" name="interskol">
@@ -452,7 +451,16 @@
           </div>
         </section>
     </footer>
-
-
+    <div class="pop-up good-to-cart">
+      <h2 class="visually-hidden">Товар добавлен в корзину</h2>
+      <button class="close" type="button" aria-label="Закрыть"></button>
+      <div class="top-side">
+        <span>Товар добавлен в корзину!</span>
+      </div>
+      <div class="bottom-side">
+        <a class="to-order" href="#">Оформить заказ</a>
+        <a class="keep-buy" href="catalog.html">Продолжить покупки</a>
+      </div>
+    </div>
   </body>
 </html>
