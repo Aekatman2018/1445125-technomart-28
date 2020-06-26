@@ -2154,6 +2154,7 @@ a.sw-button:hover {
     transform: translateX(10px);
   }
 }
+
 @keyframes growth {
   0% {
     transform: scale(0);
