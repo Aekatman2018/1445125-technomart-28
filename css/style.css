@@ -1113,6 +1113,7 @@ input#delivery-row:checked .service-list li {
 }
 .descr-credit a {
   display: inline-block;
+  position: relative;
   width: 195px;
   height: 38px;
   font-size: 14px;
@@ -1225,11 +1226,20 @@ a.write-us-button {
   vertical-align: middle;
   margin-top: 15px;
 }
-
+a.open-catalog:hover,
+.descr-credit a:hover,
+a.about-us-button:hover,
+a.write-us-button:hover,
+.p-g:hover,
+.p-m:hover {
+  background-color: #CA2C37;
+  }
 a.open-catalog:active,
 .descr-credit a:active,
 a.about-us-button:active,
-a.write-us-button:active {
+a.write-us-button:active,
+.p-g:active,
+.p-m:active {
   background-color: var(--special-error);
   }
 .about-us-button {
@@ -1480,8 +1490,7 @@ p.block-title {
 /*filter-checkbox radio */
 .filter-option label:focus {
   outline: 1px solid black;
-  z-index: 5;
-}
+  }
 .makers-filter,
 .power {
   margin: 0;
@@ -1924,6 +1933,10 @@ a.sw-button:hover {
   top: 25%;
   bottom: auto;
 }
+.good-to-cart-show {
+  display: block;
+  animation: growth 0.15s;
+}
 .top-side {
   display: block;
   text-align: center;
@@ -1967,7 +1980,6 @@ a.sw-button:hover {
   width: 192px;
   height: 38px;
   border: none;
-
 }
 .to-order {
   color: var(--basic-white);
@@ -1983,10 +1995,13 @@ a.sw-button:hover {
 /*modal write us!*/
 
 .write-us {
+  display: none;
   top: 30px;
   bottom: auto;
   width: 620px;
-
+}
+.write-us-error {
+  animation: shake 0.7s;
 }
 .write-us-form {
   width: 620px;
@@ -2066,7 +2081,7 @@ a.sw-button:hover {
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
-  background: #ff5357;
+  background: var(--basic-red);
   border: none;
   border-radius: 2px;
   width: 100%;
@@ -2091,5 +2106,83 @@ a.sw-button:hover {
 .map-window iframe {
   border: none;
 }
+.popup-show {
+  display: block;
+  animation: bounce 0.5s;
+  }
+.popup-show-map {
+  display: block;
+  animation: growth 0.4s;
+  }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
 
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+@keyframes growth {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  30% {
+    transform: scale(0.3);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(0.6);
+  }
+  70% {
+    transform: scale(0.7);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

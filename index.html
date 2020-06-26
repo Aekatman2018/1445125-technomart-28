@@ -19,7 +19,7 @@
                 <label class="visually-hidden" for="search">Поиск</label>
                 <input id="search" type="text" name="search" placeholder="Поиск:">
                 <svg class="search-icon" width="17" height="17" viewBox="0 0 17 17"  xmlns="http://www.w3.org/2000/svg">
-                  <path fill="#fff" fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+                  <path fill="#fff" fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
                 </svg>
               </form>
               <a class="bookmark" href="blank.html">
@@ -310,9 +310,9 @@
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами,<br>
                заехав в наш офис:</p>
-            <div class="map">
-              <img src="img/map.png" width="300" height="158" alt="map">
-            </div>
+            <a class="map" href="#" aria-label="карта">
+              <img src="img/map.png" width="300" height="158" alt="карта">
+            </a>
             <a class="write-us-button" href="#">заблудились? напишите нам!</a>
           </div>
         </div>
@@ -389,22 +389,22 @@
           </div>
         </section>
     </footer>
-      <div class="pop-up write-us ">
+      <div class="pop-up write-us">
         <h2 class="visually-hidden">Напишите нам!</h2>
         <button class="close" type="button" aria-label="Закрыть"></button>
         <form class="write-us-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="form-area">
             <p>
               <label for="name">Ваше имя:</label>
-              <input type="text" name="name" id="name" value="Имя Фамилия" onfocus="this.value=''" onblur="this.value='Имя Фамилия'">
+              <input class="write-us-name" type="text" name="name" id="name" value="Имя Фамилия" onfocus="this.value=''">
             </p>
             <p>
               <label for="e-mail">Ваш e-mail:</label>
-            <input type="email" name="mail" id="e-mail" value="email@expample.com" onfocus="this.value=''" onblur="this.value='email@expample.com'">
+            <input class="write-us-email" type="email" name="mail" id="e-mail" value="email@expample.com" onfocus="this.value=''">
             </p>
             <p>
               <label for="letter">Текст письма:</label>
-              <textarea id="letter" name="text-letter" cols="61" rows="5" onfocus="this.value=''" onblur="this.value='В свободной форме'">В свободной форме
+              <textarea id="letter" name="text-letter" cols="61" rows="5" onfocus="this.value=''">В свободной форме
               </textarea>
           </div>
         </form>
@@ -431,5 +431,8 @@
         <a class="keep-buy" href="catalog.html">Продолжить покупки</a>
       </div>
     </div>
+  <script src="js/write-us.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/cart.js"></script>
   </body>
 </html>
