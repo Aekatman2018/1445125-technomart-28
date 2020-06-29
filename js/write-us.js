@@ -1,6 +1,6 @@
 var writeUsBtn = document.querySelector(".write-us-button");
 var writeUs = document.querySelector(".write-us");
-var closeBtn = writeUs.querySelector(".close");
+var closeBttn = writeUs.querySelector(".close");
 var writeUsform = writeUs.querySelector(".write-us-form");
 var writeUsname = writeUs.querySelector(".write-us-name");
 var writeUsemail = writeUs.querySelector(".write-us-email");
@@ -26,7 +26,7 @@ writeUsBtn.addEventListener("click", function(evt) {
   }
 });
 
-closeBtn.addEventListener("click", function(evt) {
+closeBttn.addEventListener("click", function(evt) {
   evt.preventDefault();
   writeUs.classList.remove("popup-show");
   writeUs.classList.remove("write-us-error");
