@@ -379,7 +379,7 @@ a.cart:hover::before {
 }
 .sign-out {
   display: inline-block;
-  visibility: middle;
+  vertical-align: middle;
   text-align: left;
   width: 57px;
   height: 44px;
