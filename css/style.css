@@ -210,7 +210,7 @@
     height: 100%;
     padding-bottom: 0;
     margin: 0px;
-    }
+  }
   .bookmark {
     position: relative;
     display: -webkit-box;
@@ -1173,7 +1173,7 @@
     margin-top: 38px;
     margin-bottom: 10px;
   }
-    a.buy::before {
+  a.buy::before {
     content: url(../img/svg/icon-cart.svg);
     position: absolute;
     left: 30px;
